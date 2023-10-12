@@ -42,21 +42,35 @@ export class PixelWarComponent implements OnInit {
     });
   }
 
+  /**
+   * Ferme la pop-up de sélection de couleur.
+   */
   closeColorPicker() {
     this.openPopUp = false;
   }
 
+  /**
+   * Met à jour la couleur sélectionnée dans la pop-up.
+   * @param event Événement de saisie de couleur
+   */
   updateColor(event: Event) {
     const input = event.target as HTMLInputElement;
     this.popUpColor = input.value;
   }
+
+  /**
+   * Gère le clic sur le canvas en ouvrant la pop-up de sélection de couleur.
+   * @param event Événement de clic de la souris
+   */
   click(event: MouseEvent) {
     this.eventX = event.offsetX;
     this.eventY = event.offsetY;
     this.openPopUp = true;
   }
 
-
+  /**
+   * Valide la couleur sélectionnée dans la pop-up et envoie un pixel au serveur.
+   */
   valideColor() {
     this.closeColorPicker();
     const x = Math.floor(this.eventX / 10) * 10;
@@ -74,7 +88,10 @@ export class PixelWarComponent implements OnInit {
     });
   }
 
-  // Méthode pour placer le pixel sur le canvas
+  /**
+   * Place un pixel sur le canvas à la position spécifiée.
+   * @param pixel Pixel à placer sur le canvas
+   */
   placePixel(pixel: Pixel) {
     const canvas = this.canvas.nativeElement;
     const context = canvas.getContext('2d');
@@ -87,6 +104,10 @@ export class PixelWarComponent implements OnInit {
     }
   }
 
+  /**
+   * Envoie un pixel au serveur via WebSocket.
+   * @param pixel Pixel à envoyer au serveur
+   */
  sendPixel(pixel: Pixel){
    this.webSocketService.send({
      type: 'updatePixel',
