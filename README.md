@@ -1,27 +1,28 @@
-# PixelWar
+Projet Angular PixelWar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+Le projet Angular PixelWar est une application Web basée sur Angular qui permet aux utilisateurs de collaborer pour créer une toile de peinture virtuelle.
 
-## Development server
+Prérequis
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Avant de commencer à travailler sur le projet, assurez-vous d'avoir les éléments suivants installés sur votre machine :
 
-## Code scaffolding
+- Node.js : Vous pouvez le télécharger sur le site officiel de Node.js (https://nodejs.org/).
+- Angular CLI : Pour installer Angular CLI, ouvrez une ligne de commande et exécutez la commande suivante : npm install -g @angular/cli
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Installation
 
-## Build
+1. Clonez ce dépôt Git sur votre machine locale : https://github.com/juva-quentin/PixelWar.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Pour démarrer le développement de l'application, exécutez `npm install` pour installer les dépendances nécessaires.
 
-## Running unit tests
+## Serveur de développement
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Exécutez `ng serve` ou `npm start` pour lancer un serveur de développement. Accédez à `http://localhost:4200/` dans votre navigateur. L'application se rechargera automatiquement si vous modifiez l'un des fichiers source.
 
-## Running end-to-end tests
+## Génération de code
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Utilisez `ng generate component nom-du-composant` pour générer un nouveau composant. Vous pouvez également utiliser `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Further help
+## Construction
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Exécutez `ng build` pour construire le projet. Les fichiers de construction seront stockés dans le répertoire `dist/`.
