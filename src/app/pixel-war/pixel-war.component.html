@@ -1,1 +1,17 @@
-<p>pixel-war works!</p>
+<canvas
+#pixelWar
+style="border: 1px solid"
+width="1000"
+height="700"
+(click)="click($event)"
+></canvas>
+
+<div class="overlay" *ngIf="openPopUp"></div>
+<div class="pop-up" *ngIf="openPopUp">
+  <form (submit)="valideColor()">
+    <label for="color">Couleur RGB : </label>
+    <input type="color" id="color" (input)="updateColor($event)" required>
+    <button type="submit">Choisir</button>
+  </form>
+</div>
+
