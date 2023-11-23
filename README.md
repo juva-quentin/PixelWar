@@ -26,3 +26,6 @@ Utilisez `ng generate component nom-du-composant` pour générer un nouveau comp
 ## Construction
 
 Exécutez `ng build` pour construire le projet. Les fichiers de construction seront stockés dans le répertoire `dist/`.
+
+## Projet serveur
+Vous pouvez lancer l'intergralité du projet via un docker compose present dans le projet du server : https://github.com/juva-quentin/PixelWarServer.git
